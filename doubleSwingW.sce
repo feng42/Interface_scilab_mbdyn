@@ -60,28 +60,28 @@ joints(3,3).entries=2*pi;
 mfprintf(fid,'%s\n\n','# double_rigid_pendulum_2.mbd');
 
 //problem type
-exec problem_write.sci
+exec app/problem_write.sci;
 
 //initial value
-exec iv_write.sci
+exec app/iv_write.sci;
 
 
 //control data
-exec control_write.sci
+exec app/control_write.sci;
 
 //const set
-exec const_write.sci
+exec app/const_write.sci;
 
 //Reference
-exec ref_write.sci
+exec app/ref_write.sci;
 
 //size(tmp)
-exec nodes_write.sci
+exec app/nodes_write.sci;
 
 //elements
 //gravity
 //force
-exec elem_write.sci
+exec app/elem_write.sci;
 
 //end
 
