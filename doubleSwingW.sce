@@ -1,6 +1,6 @@
-clear;
+//clear;
 //===============create file===============//
-txt_outpath='double_swing.mbd';
+txt_outpath='out/double_swing.mbd';
 fid=mopen(txt_outpath,'w');
 
 //===============dataset===============//
@@ -16,7 +16,7 @@ thete2=double((pi)/6) ;
 
 //referrence data
 nullMatrix=[0,0,0;0,0,0;0,0,0];
-refMatrix=[0,0,0,0,0,0,0,0,0,0,0,0;
+refMatrix=[0,0,0,0,pi-thete1,0,0,0,0,0,0,0;
             1,0,0,0,-thete2,0,0,0,0,0,0,0];
 
 //node data
@@ -86,4 +86,5 @@ exec app/elem_write.sci;
 //end
 
 //===============close file===============//
-mclose(fid);
+unix_s("mbdyn -f ./out/double_swing.mbd")
+//exit
