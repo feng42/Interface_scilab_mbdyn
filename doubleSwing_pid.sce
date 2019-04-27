@@ -1,12 +1,12 @@
 //doubleSwing_pid
 clc;
 clear;
-rootpath = "/home/feng/zhangfeng3/Interface_scilab_mbdyn/";
+rootpath = unix_g("pwd") + "/";
 mbd_outfile = "out/double_swing_test.mbd";
 mov_outfile = "out/double_swing_test.mov";
 
 // miission init
-Tf = 100;
+Tf = 50;
 //init = [0,30]
 pi = 3.1415926
 
@@ -70,9 +70,9 @@ for i =1:dt:Tf
 end
 
 // pic
-subplot(2,1,1);
-plot(t,ang);
-subplot(2,1,2);
+//subplot(2,1,1);
+//plot(t,ang);
+//subplot(2,1,2);
 param3d1([xout(1,:)',xout(2,:)'], [zout(1,:)',zout(2,:)'], list([t',t'],[2,5]));
 //param3d(xout(1,:),zout(1,:),t);
 //param3d(xout(2,:),zout(2,:),t);

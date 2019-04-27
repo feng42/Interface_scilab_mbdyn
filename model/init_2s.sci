@@ -42,5 +42,5 @@ function [time_cfg, const_val, ref_mat, nodes, bodies, joints]=init_2s()
     joints(2,3).entries=-0.01 * pi;
     joints(3,1).entries='axial rotation';
     joints(3,2).entries=axi2;
-    joints(3,3).entries=0.005 * pi;
+    joints(3,3).entries=-0.005 * pi;
 endfunction
