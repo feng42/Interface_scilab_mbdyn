@@ -3,13 +3,13 @@ mfprintf(fid,'%s\n','# [CONST BLOCK]');
 mfprintf(fid,'\n');
 
 //Design Varibles
-mfprintf(fid,'%s%d%s\n','set: real M = ',M,'.;');//Mass of Link1 and Link2
-mfprintf(fid,'%s%d%s\n','set: real L = ',L,'.;');//Length of Link1 and Link2
-mfprintf(fid,'%s%f%s\n','set: real thete1 = ',thete1,';');//Initial angle of Link1 w.r.t vertical line
-mfprintf(fid,'%s%f%s\n','set: real thete2 = ',thete2,';');//Initial angle of Link2 w.r.t Link1
+mfprintf(fid,'%s%d%s\n','set: real M = ',const_val(1,1),'.;');//Mass of Link1 and Link2
+mfprintf(fid,'%s%d%s\n','set: real L = ',const_val(1,2),'.;');//Length of Link1 and Link2
+//mfprintf(fid,'%s%f%s\n','set: real thete1 = ',const_val(1,3),';');//Initial angle of Link1 w.r.t vertical line
+//mfprintf(fid,'%s%f%s\n','set: real thete2 = ',const_val(1,4),';');//Initial angle of Link2 w.r.t Link1
 
 //Reference Labels
-sizeRef=size(refMatrix);
+sizeRef=size(ref_mat);
 rowR=sizeRef(1,1);
 for i=1:rowR
     link='Ref_Link'+string(i);

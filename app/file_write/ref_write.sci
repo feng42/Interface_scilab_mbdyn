@@ -3,7 +3,7 @@ mfprintf(fid,'%s\n','# [REF BLOCK]');
 mfprintf(fid,'\n');
 
 
-sizeRef=size(refMatrix);
+sizeRef=size(ref_mat);
 row=sizeRef(1,1);
 col=sizeRef(1,2);
 for i=1:row
@@ -20,12 +20,12 @@ for i=1:row
         for j=1:3
             if j==3 then
                 if k==(col/3-1) then
-                    mfprintf(fid,'%f%s',refMatrix(i,k*3+j),';');
+                    mfprintf(fid,'%f%s',ref_mat(i,k*3+j),';');
                 else
-                    mfprintf(fid,'%f%s',refMatrix(i,k*3+j),',');
+                    mfprintf(fid,'%f%s',ref_mat(i,k*3+j),',');
                 end
             else
-                mfprintf(fid,'%f%s',refMatrix(i,k*3+j),',');
+                mfprintf(fid,'%f%s',ref_mat(i,k*3+j),',');
             end
         end
         mfprintf(fid,'\n');

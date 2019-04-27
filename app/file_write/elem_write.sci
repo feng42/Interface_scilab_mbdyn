@@ -13,7 +13,7 @@ for i=1:row
     lb='Body_Link'+string(i);
     ln='Node_Link'+string(i+1);
     mfprintf(fid,'%s%s%s%s%s\n','body:',lb,',',ln,',');
-    mfprintf(fid,'%f%s\n',M,',');//mass
+    mfprintf(fid,'%f%s\n',const_val(1,1),',');//mass
         
     s='';
     for j=1:col
@@ -156,6 +156,6 @@ end
 
 
 
-mfprintf(fid,'%s\n','gravity: 0., 0., -1., const, 9.81;');
+//mfprintf(fid,'%s\n','gravity: 0., 0., -1., const, 9.81;');
 mfprintf(fid,'\n');
 mfprintf(fid,'%s\n','end: elements;');

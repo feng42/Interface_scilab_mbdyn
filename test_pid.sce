@@ -1,24 +1,24 @@
 //pid_test
 
 clear;clc;
-T = 60;
+//T = 60;
 
-Tf = 10000;
+Tf = 1500;
 target = 90;
 _pre_error0 = 90;
 _integral0 = 0;
 
-dt = 0.1;
+dt = 1;
 _max = 20;
 _min = -20;
-Kp = 0.1;
+Kp = 0.2;
 Ki = 0.01;
 Kd = 0.3;
 
 omg = 0;
 bet = 0;
 ang = 0;
-pre_stat = [_pre_error0, _integral0]
+pre_stat = [_pre_error0, _integral0];
 
 pid_cfg = [dt,_max,_min,Kp,Ki,Kd];
 K = 0.1;
